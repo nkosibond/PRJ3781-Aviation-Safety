@@ -1,32 +1,14 @@
-﻿<?xml version="1.0" encoding="UTF-8" ?>
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
 <Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:Aviation"
-             x:Class="Aviation.App">
+             xmlns:local="clr-namespace:MauiApp1"
+             x:Class="MauiApp1.App">
     <Application.Resources>
         <ResourceDictionary>
-            <Color x:Key="Primary">#0047AB</Color>
-            <Color x:Key="Secondary">#FFFFFF</Color>
-            <Color x:Key="Tertiary">#E6E6FA</Color>
-            <Color x:Key="TextPrimary">#000000</Color>
-            <Color x:Key="TextSecondary">#FFFFFF</Color>
-
-            <Style TargetType="Page" ApplyToDerivedTypes="True">
-                <Setter Property="BackgroundColor" Value="{StaticResource Secondary}"/>
-            </Style>
-
-            <Style TargetType="Label">
-                <Setter Property="TextColor" Value="{StaticResource TextPrimary}"/>
-                <Setter Property="FontFamily" Value="OpenSansRegular"/>
-            </Style>
-
-            <Style TargetType="Button">
-                <Setter Property="BackgroundColor" Value="{StaticResource Primary}"/>
-                <Setter Property="TextColor" Value="{StaticResource TextSecondary}"/>
-                <Setter Property="FontFamily" Value="OpenSansSemibold"/>
-                <Setter Property="CornerRadius" Value="8"/>
-                <Setter Property="Padding" Value="14,10"/>
-            </Style>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
+                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

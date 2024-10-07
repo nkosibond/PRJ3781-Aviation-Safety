@@ -1,14 +1,30 @@
-﻿namespace Aviation;
+﻿namespace MauiApp1;
 
 public partial class MainPage : ContentPage
 {
-    public MainPage()
-    {
-        InitializeComponent();
-    }
+	int count = 0;
 
-    private async void OnGetStartedClicked(object sender, EventArgs e)
+	public MainPage()
+	{
+		InitializeComponent();
+	}
+
+	private void OnCounterClicked(object sender, EventArgs e)
+	{
+		count++;
+
+		if (count == 1)
+			CounterBtn.Text = $"Clicked {count} time";
+		else
+			CounterBtn.Text = $"Clicked {count} times";
+
+		SemanticScreenReader.Announce(CounterBtn.Text);
+	}
+
+    private async void OnNavigateButtonClicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new LoginPage());
+        // Assuming you're using a NavigationPage
+        await Navigation.PushAsync(new NewHomePage());
     }
 }
+
