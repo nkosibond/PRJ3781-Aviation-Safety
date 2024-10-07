@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.NewHomePage"
+             Title="Home Page">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label 
+                Text="Welcome to Aviation Safety"
+                FontSize="35"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+
+            <StackLayout Padding="20" Spacing="15">
+
+                 
+                <!-- Username Entry -->
+                <Entry
+                x:Name="UsernameEntry"
+                Placeholder="Enter your username"
+                Keyboard="Default"
+                TextColor="White"
+                
+                PlaceholderColor="Gold"
+                HorizontalOptions="FillAndExpand" />
+
+                <!-- Password Entry -->
+                <Entry
+                x:Name="PasswordEntry"
+                Placeholder="Enter your password"
+                IsPassword="True"
+                Keyboard="Default"
+                TextColor="White"
+                PlaceholderColor="Gold"
+                HorizontalOptions="FillAndExpand" />
+
+                <!-- Login Button -->
+                <Button
+                Text="Login"
+                Clicked="OnLoginButtonClicked"
+                BackgroundColor="Gold"
+                TextColor="White"
+                HorizontalOptions="Center" />
+
+
+
+                <Label 
+                Text="Sign Up with Email"
+                FontSize="Subtitle"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+                <!-- Sign Up Button -->
+                <ImageButton
+                Source="email_icon.png"
+                Clicked="OnSignUpButtonClicked"
+                BackgroundColor="Transparent"
+                HorizontalOptions="Center"
+                WidthRequest="50"
+                HeightRequest="50" />
+
+
+
+                <Label 
+                Text="Sign in with google"
+                FontSize="Subtitle"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+                <!-- Sign In with Another Method Button -->
+               <ImageButton
+                Source="google_icon.png"
+                Clicked="OnSignInWithGoogleClicked"
+                BackgroundColor="Transparent"
+                HorizontalOptions="Center"
+                WidthRequest="50"
+                HeightRequest="50" />
+
+            </StackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
