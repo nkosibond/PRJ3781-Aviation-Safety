@@ -1,55 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiApp1.MainPage"
-             >
+             x:Class="Aviation.MainPage"
+             Title="Welcome">
+    <Grid>
+        <Image Source="plane_icon.jpg" Aspect="AspectFill" />
 
-    <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
-
-                <Image
-                Source="airplane.png"
-                SemanticProperties.Description="An airplane symbolizing aviation safety"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
-
-                <Label
-                Text="Aviation Safety App"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                TextColor="ForestGreen"
-                HorizontalOptions="Center" />
-
-                <Label
-                Text="Your gateway to ensuring safer skies"
-                SemanticProperties.HeadingLevel="Level2"
-                FontSize="18"
-                TextColor="DarkOliveGreen"
-                HorizontalOptions="Center" />
-
-                <Button
-                x:Name="CounterBtn"
-                Text="Get Started"
-                SemanticProperties.Hint="Navigate to the main features of the app"
-                Clicked="OnCounterClicked"
-                BackgroundColor="Green"
-                TextColor="White"
-                HorizontalOptions="Center" />
-
-                <Button
-                x:Name="NavigateBtn"
-                Text="Go to Page 2"
-                SemanticProperties.Hint="Navigate to the second page"
-                Clicked="OnNavigateButtonClicked"
-                BackgroundColor="Blue"
-                TextColor="White"
-                HorizontalOptions="Center" />
-
+        <VerticalStackLayout Spacing="25" Padding="30,0" VerticalOptions="Center">
+            <Label Text="Aviation Safety App" FontSize="40" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+            <Label Text="Your gateway to ensuring safer skies" FontSize="20" TextColor="White" HorizontalOptions="Center" />
+            <Button Text="Get Started" Clicked="OnGetStartedClicked" HorizontalOptions="Center" WidthRequest="200"/>
         </VerticalStackLayout>
-
-    </ScrollView>
-
+    </Grid>
 </ContentPage>

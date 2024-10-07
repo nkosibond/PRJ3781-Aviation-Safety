@@ -1,24 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Shell
-    x:Class="MauiApp1.AppShell"
+    x:Class="Aviation.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:MauiApp1"
-    Shell.FlyoutBehavior="Flyout"
-    FlyoutBackgroundColor="White"
-    FlyoutBackdrop="#80000000">
+    xmlns:local="clr-namespace:Aviation"
+    Shell.FlyoutBehavior="Disabled">
 
-    
-        <ShellContent
-            Title="Welcome"
-            ContentTemplate="{DataTemplate local:MainPage}"
-            Route="MainPage" 
-            Shell.TitleColor="Black"/>
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
 
-        <ShellContent
-            Title="Home Page"
-            ContentTemplate="{DataTemplate local:NewHomePage}"
-            Route="Home Page" 
-            Shell.TitleColor="Black"/>
-    
 </Shell>

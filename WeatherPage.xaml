@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aviation.WeatherPage"
+             Title="Weather Display">
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="20">
+            <Label Text="Current Weather Conditions" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center"/>
+
+            <Frame BackgroundColor="{StaticResource Primary}" Padding="20">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Temperature: 22°C" TextColor="White"/>
+                    <Label Text="Wind: 5 knots NE" TextColor="White"/>
+                    <Label Text="Visibility: 10 km" TextColor="White"/>
+                    <Label Text="Cloud Cover: Scattered clouds" TextColor="White"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Label Text="Forecast" FontSize="20" FontAttributes="Bold"/>
+
+            <Frame Margin="0,0,0,10" BackgroundColor="{StaticResource Tertiary}">
+                <VerticalStackLayout>
+                    <Label Text="Tomorrow" FontAttributes="Bold"/>
+                    <Label Text="Temp: 23°C"/>
+                    <Label Text="Partly cloudy"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame Margin="0,0,0,10" BackgroundColor="{StaticResource Tertiary}">
+                <VerticalStackLayout>
+                    <Label Text="Day After Tomorrow" FontAttributes="Bold"/>
+                    <Label Text="Temp: 25°C"/>
+                    <Label Text="Sunny"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Button Text="Refresh Weather Data" Clicked="OnRefreshWeatherClicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

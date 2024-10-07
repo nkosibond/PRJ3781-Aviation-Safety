@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Aviation.SafetyChecklistPage"
+             Title="Safety Checklist">
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="20">
+            <Label Text="Pre-Flight Safety Checklist" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center"/>
+
+            <VerticalStackLayout Spacing="10">
+                <CheckBox x:Name="CheckAircraft" Color="{StaticResource Primary}"/>
+                <Label Text="Aircraft documentation and airworthiness" VerticalOptions="Center"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Spacing="10">
+                <CheckBox x:Name="CheckWeather" Color="{StaticResource Primary}"/>
+                <Label Text="Weather conditions and forecast" VerticalOptions="Center"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Spacing="10">
+                <CheckBox x:Name="CheckFuel" Color="{StaticResource Primary}"/>
+                <Label Text="Fuel and oil levels" VerticalOptions="Center"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Spacing="10">
+                <CheckBox x:Name="CheckWeight" Color="{StaticResource Primary}"/>
+                <Label Text="Weight and balance calculations" VerticalOptions="Center"/>
+            </VerticalStackLayout>
+
+            <Button Text="Confirm Checklist" Clicked="OnConfirmChecklistClicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

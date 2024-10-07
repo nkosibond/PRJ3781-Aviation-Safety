@@ -1,9 +1,10 @@
-﻿namespace MauiApp1;
-
-public partial class AppShell : Shell
+﻿namespace Aviation
 {
-	public AppShell()
-	{
-		InitializeComponent();
-	}
+    public partial class AppShell : Shell
+    {
+        public AppShell()
+        {
+            InitializeComponent();
+        }
+    }
 }
