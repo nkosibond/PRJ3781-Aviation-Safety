@@ -4,11 +4,11 @@
              x:Class="Aviation.MainPage"
              Title="Welcome">
     <Grid>
-        <Image Source="plane_icon.jpg" Aspect="AspectFill" />
+        <Image Source="backdrop_icon.jpg" Aspect="AspectFill" />
 
         <VerticalStackLayout Spacing="25" Padding="30,0" VerticalOptions="Center">
             <Label Text="Aviation Safety App" FontSize="40" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
-            <Label Text="Your gateway to ensuring safer skies" FontSize="20" TextColor="White" HorizontalOptions="Center" />
+            <Label Text="Your gateway to ensuring safer skies" FontSize="25" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center" />
             <Button Text="Get Started" Clicked="OnGetStartedClicked" HorizontalOptions="Center" WidthRequest="200"/>
         </VerticalStackLayout>
     </Grid>

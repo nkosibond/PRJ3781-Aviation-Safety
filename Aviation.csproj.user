@@ -15,6 +15,9 @@
     <MauiXaml Update="SafetyChecklistPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="SignUpPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="WeatherPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>

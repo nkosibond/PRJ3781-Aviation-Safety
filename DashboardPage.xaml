@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Aviation.DashboardPage"
-             >
-
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Aviation.DashboardPage"
+>
     <Grid>
         <!--Background image-->
-        <Image Source="plane_icon.jpg" 
-               Aspect="AspectFill" 
-               HorizontalOptions="Fill" 
-               VerticalOptions="Fill"
-               Opacity="0.5"/>
-        
+        <Image Source="backdrop_icon.jpg" Aspect="AspectFill" HorizontalOptions="Fill" VerticalOptions="Fill" />
         <ScrollView>
             <Grid Padding="20" RowSpacing="20" ColumnSpacing="20">
-                
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="*"/>
@@ -28,84 +22,52 @@
                 <Label Text="Pilot Dashboard" FontSize="30" Grid.ColumnSpan="2" HorizontalOptions="Center" TextColor="white" FontAttributes="Bold" />
 
                 <!--Safety checklist-->
-                <Frame Grid.Row="1" Grid.Column="0" BackgroundColor="{StaticResource Primary}" Padding="10">
-                    <VerticalStackLayout>
-                        <Label Text="Safety Checklist" TextColor="White" FontSize="18" FontAttributes="Bold"/>
-                        <Button Text="View Checklist" Clicked="OnViewChecklistClicked" BackgroundColor="White" TextColor="{StaticResource Primary}"/>
-
-                        <!-- Wrapping the Image in a Frame to add rounded corners -->
-                        <Frame CornerRadius="20" Padding="0" IsClippedToBounds="True" BackgroundColor="Transparent" HorizontalOptions="Center">
-                            <Image Source="checklist_icon.jpg"
-                   WidthRequest="500"
-                   HeightRequest="250"
-                   Aspect="AspectFill"
-                   Opacity="0.9"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center" />
-                        </Frame>
-                    </VerticalStackLayout>
+                <Frame Grid.Row="1" Grid.Column="0" BackgroundColor="{StaticResource Primary}" Padding="0">
+                    <Grid>
+                        <Image Source="checklist_icon.jpg" Aspect="AspectFill"/>
+                        <VerticalStackLayout Padding="10" BackgroundColor="#80000000">
+                            <Button Text="View Safety Checklist" Clicked="OnViewChecklistClicked" 
+                                    BackgroundColor="White" TextColor="{StaticResource Primary}"
+                                    HorizontalOptions="Center" VerticalOptions="Center"/>
+                        </VerticalStackLayout>
+                    </Grid>
                 </Frame>
-
 
                 <!--Weather report-->
-                <Frame Grid.Row="1" Grid.Column="1" BackgroundColor="{StaticResource Primary}" Padding="10">
-                    <VerticalStackLayout>
-                        <Label Text="Weather Report" TextColor="White" FontSize="18" FontAttributes="Bold"/>
-                        <Button Text="Check Weather" Clicked="OnCheckWeatherClicked" BackgroundColor="White" TextColor="{StaticResource Primary}"/>
-
-                        <!-- Wrapping the Image in a Frame to add rounded corners -->
-                        <Frame CornerRadius="20" Padding="0" IsClippedToBounds="True" BackgroundColor="Transparent" HorizontalOptions="Center">
-                            <Image Source="weather_icon.jpg"
-                   WidthRequest="500"
-                   HeightRequest="250"
-                   Aspect="AspectFill"
-                   Opacity="0.9"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center" />
-                        </Frame>
-                    </VerticalStackLayout>
+                <Frame Grid.Row="1" Grid.Column="1" BackgroundColor="{StaticResource Primary}" Padding="0">
+                    <Grid>
+                        <Image Source="weather_icon.jpg" Aspect="AspectFill" />
+                        <VerticalStackLayout Padding="10" BackgroundColor="#80000000">
+                            <Button Text="Check Weather Report" Clicked="OnCheckWeatherClicked" 
+                                    BackgroundColor="White" TextColor="{StaticResource Primary}"
+                                    HorizontalOptions="Center" VerticalOptions="Center"/>
+                        </VerticalStackLayout>
+                    </Grid>
                 </Frame>
-
 
                 <!--Flight planner-->
-                <Frame Grid.Row="2" Grid.Column="0" BackgroundColor="{StaticResource Primary}" Padding="10">
-                    <VerticalStackLayout>
-                        <Label Text="Flight Planner" TextColor="White" FontSize="18" FontAttributes="Bold"/>
-                        <Button Text="Plan Flight" Clicked="OnPlanFlightClicked" BackgroundColor="White" TextColor="{StaticResource Primary}"/>
-
-                        <!-- Wrapping the Image in a Frame to add rounded corners -->
-                        <Frame CornerRadius="20" Padding="0" IsClippedToBounds="True" BackgroundColor="Transparent" HorizontalOptions="Center">
-                            <Image Source="planner_icon.png"
-                   WidthRequest="500"
-                   HeightRequest="250"
-                   Aspect="AspectFill"
-                   Opacity="0.9"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center" />
-                        </Frame>
-                    </VerticalStackLayout>
+                <Frame Grid.Row="2" Grid.Column="0" BackgroundColor="{StaticResource Primary}" Padding="0">
+                    <Grid>
+                        <Image Source="planner_icon.png" Aspect="AspectFill" />
+                        <VerticalStackLayout Padding="10" BackgroundColor="#80000000">
+                            <Button Text="Plan Flight" Clicked="OnPlanFlightClicked" 
+                                    BackgroundColor="White" TextColor="{StaticResource Primary}"
+                                    HorizontalOptions="Center" VerticalOptions="Center"/>
+                        </VerticalStackLayout>
+                    </Grid>
                 </Frame>
-
 
                 <!--Emergency procedure-->
-                <Frame Grid.Row="2" Grid.Column="1" BackgroundColor="{StaticResource Primary}" Padding="10">
-                    <VerticalStackLayout>
-                        <Label Text="Emergency Procedures" TextColor="White" FontSize="18" FontAttributes="Bold"/>
-                        <Button Text="View Procedures" Clicked="OnViewProceduresClicked" BackgroundColor="White" TextColor="{StaticResource Primary}"/>
-
-                        <!-- Wrapping the Image in a Frame to add rounded corners -->
-                        <Frame CornerRadius="20" Padding="0" IsClippedToBounds="True" BackgroundColor="Transparent" HorizontalOptions="Center">
-                            <Image Source="em_icon.jpg"
-                   WidthRequest="500"
-                   HeightRequest="250"
-                   Aspect="AspectFill"
-                   Opacity="0.9"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center" />
-                        </Frame>
-                    </VerticalStackLayout>
+                <Frame Grid.Row="2" Grid.Column="1" BackgroundColor="{StaticResource Primary}" Padding="0">
+                    <Grid>
+                        <Image Source="em_icon.jpg" Aspect="AspectFill" />
+                        <VerticalStackLayout Padding="10" BackgroundColor="#80000000">
+                            <Button Text="View Emergency Procedures" Clicked="OnViewProceduresClicked" 
+                                    BackgroundColor="White" TextColor="{StaticResource Primary}"
+                                    HorizontalOptions="Center" VerticalOptions="Center"/>
+                        </VerticalStackLayout>
+                    </Grid>
                 </Frame>
-
             </Grid>
         </ScrollView>
     </Grid>

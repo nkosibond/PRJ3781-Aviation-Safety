@@ -4,79 +4,29 @@
              x:Class="Aviation.LoginPage"
              Title="Login">
     <Grid>
-        <Image 
-            Source="plane_icon.jpg" 
-            Aspect="AspectFill"
-            Opacity="0.6"/>
-        
+        <Image Source="backdrop_icon.jpg" Aspect="AspectFill" Opacity="0.8"/>
         <ScrollView>
             <VerticalStackLayout>
-                
-                <Label 
-                    Text="Welcome to the Aviation Safety App"
-                    FontSize="35"
-                    VerticalOptions="Center" 
-                    HorizontalOptions="Center"
-                    TextColor="White"/>
+                <Label Text="Welcome to the Aviation Safety App" FontSize="35"
+                       VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
                 <StackLayout Padding="20" Spacing="15">
-                    
                     <!--Username input-->
-                    <Entry
-                        x:Name="username_Entry"
-                        Placeholder="Enter your username"
-                        Keyboard="Default"
-                        TextColor="Black"
-                        PlaceholderColor="#0047AB"
-                        HorizontalOptions="CenterAndExpand" />
-
+                    <Entry x:Name="username_Entry" Placeholder="Enter your username" Keyboard="Default"
+                           TextColor="Black" PlaceholderColor="#0047AB" HorizontalOptions="CenterAndExpand" />
                     <!--Password input-->
-                    <Entry
-                        x:Name="password_Entry"
-                        Placeholder="Enter your password"
-                        IsPassword="True"
-                        Keyboard="Default"
-                        TextColor="Black"
-                        PlaceholderColor="#0047AB"
-                        HorizontalOptions="CenterAndExpand" />
-
+                    <Entry x:Name="password_Entry" Placeholder="Enter your password" IsPassword="True" Keyboard="Default"
+                           TextColor="Black" PlaceholderColor="#0047AB" HorizontalOptions="CenterAndExpand" />
                     <!--Login button-->
-                    <Button
-                        Text="Login"
-                        Clicked="OnLoginButtonClicked"
-                        BackgroundColor="#0047AB"
-                        TextColor="White"
-                        HorizontalOptions="Center" />
-
-                    <!--Email sign up-->
-                    <Label 
-                        Text="Sign Up with Email"
-                        FontSize="Subtitle"
-                        VerticalOptions="Center" 
-                        HorizontalOptions="Center"
-                        TextColor="White"/>
-                    
-                    <ImageButton
-                        Source="email_icon.png"
-                        Clicked="OnSignUpButtonClicked"
-                        BackgroundColor="Transparent"
-                        HorizontalOptions="Center"
-                        WidthRequest="50"
-                        HeightRequest="50" />
-
-                    <!--Google sign up-->
-                    <Label
-                        Text="Sign in with google"
-                        FontSize="Subtitle"
-                        VerticalOptions="Center" 
-                        HorizontalOptions="Center"
-                        TextColor="White"/>
-                    <ImageButton
-                        Source="google_icon.png"
-                        Clicked="OnSignInWithGoogleClicked"
-                        BackgroundColor="Transparent"
-                        HorizontalOptions="Center"
-                        WidthRequest="50"
-                        HeightRequest="50" />
+                    <Button Text="Login" Clicked="OnLoginButtonClicked" BackgroundColor="#0047AB" TextColor="White"
+                            HorizontalOptions="Center" />
+                    <!--Sign Up button-->
+                    <Button Text="Sign Up" Clicked="OnSignUpButtonClicked" BackgroundColor="#0047AB" TextColor="White"
+                            HorizontalOptions="Center" />
+                    <!--Google sign in-->
+                    <Label Text="Sign in with Google" FontSize="Subtitle"
+                           VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
+                    <ImageButton Source="google_icon.png" Clicked="OnSignInWithGoogleClicked" BackgroundColor="Transparent"
+                                 HorizontalOptions="Center" WidthRequest="50" HeightRequest="50" />
                 </StackLayout>
             </VerticalStackLayout>
         </ScrollView>

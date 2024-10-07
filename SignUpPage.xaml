@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Aviation.SignUpPage"
+    Title="Sign Up">
+    <Grid>
+        <Image Source="backdrop_icon.jpg" Aspect="AspectFill" Opacity="0.8"/>
+        <ScrollView>
+            <VerticalStackLayout>
+                <Label Text="Create Your Account" FontSize="35"
+                       VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
+                <StackLayout Padding="20" Spacing="15">
+                    <!--Email input-->
+                    <Entry x:Name="email_Entry" Placeholder="Enter your email" Keyboard="Email"
+                           TextColor="Black" PlaceholderColor="#0047AB" HorizontalOptions="CenterAndExpand" />
+                    <!--Username input-->
+                    <Entry x:Name="username_Entry" Placeholder="Choose a username" Keyboard="Default"
+                           TextColor="Black" PlaceholderColor="#0047AB" HorizontalOptions="CenterAndExpand" />
+                    <!--Password input-->
+                    <Entry x:Name="password_Entry" Placeholder="Create a password" IsPassword="True" Keyboard="Default"
+                           TextColor="Black" PlaceholderColor="#0047AB" HorizontalOptions="CenterAndExpand" />
+                    <!--Confirm Password input-->
+                    <Entry x:Name="confirm_password_Entry" Placeholder="Confirm password" IsPassword="True" Keyboard="Default"
+                           TextColor="Black" PlaceholderColor="#0047AB" HorizontalOptions="CenterAndExpand" />
+                    <!--Sign Up button-->
+                    <Button Text="Sign Up" Clicked="OnSignUpButtonClicked" BackgroundColor="#0047AB" TextColor="White"
+                            HorizontalOptions="Center" />
+                    <!--Login link-->
+                    <Label Text="Already have an account? Log In" FontSize="Subtitle"
+                           VerticalOptions="Center" HorizontalOptions="Center" TextColor="White">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnLoginLinkTapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

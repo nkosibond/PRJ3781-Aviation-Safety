@@ -9,7 +9,7 @@ public partial class WeatherPage : ContentPage
 
     private void OnRefreshWeatherClicked(object sender, EventArgs e)
     {
-        // In a real app, this would fetch new data from a weather API
+        //Fetch new data from a weather API
         DisplayAlert("Weather Updated", "Weather data has been refreshed.", "OK");
     }
 }
