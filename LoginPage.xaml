@@ -11,7 +11,7 @@
                        VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
                 <StackLayout Padding="20" Spacing="15">
                     <!--Username input-->
-                    <Entry x:Name="username_Entry" Placeholder="Enter your username" Keyboard="Default"
+                    <Entry x:Name="username_Entry" Placeholder="Enter your email" Keyboard="Email"
                            TextColor="Black" PlaceholderColor="#0047AB" HorizontalOptions="CenterAndExpand" />
                     <!--Password input-->
                     <Entry x:Name="password_Entry" Placeholder="Enter your password" IsPassword="True" Keyboard="Default"
@@ -22,6 +22,13 @@
                     <!--Sign Up button-->
                     <Button Text="Sign Up" Clicked="OnSignUpButtonClicked" BackgroundColor="#0047AB" TextColor="White"
                             HorizontalOptions="Center" />
+                    <!--Forgot Password link-->
+                    <Label Text="Forgot Password?" FontSize="Subtitle"
+                           VerticalOptions="Center" HorizontalOptions="Center" TextColor="White">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnForgotPasswordTapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>
                     <!--Google sign in-->
                     <Label Text="Sign in with Google" FontSize="Subtitle"
                            VerticalOptions="Center" HorizontalOptions="Center" TextColor="White"/>
