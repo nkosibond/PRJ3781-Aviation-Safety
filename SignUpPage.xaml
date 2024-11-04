@@ -14,8 +14,14 @@
                     <!--Email input-->
                     <Entry x:Name="email_Entry" Placeholder="Enter your email" Keyboard="Email"
                            TextColor="Black" PlaceholderColor="#0047AB" HorizontalOptions="CenterAndExpand" />
-                    <!--Username input-->
-                    <Entry x:Name="username_Entry" Placeholder="Choose a username" Keyboard="Default"
+                    <!--Name input-->
+                    <Entry x:Name="name_Entry" Placeholder="Enter your first name" Keyboard="Default"
+                           TextColor="Black" PlaceholderColor="#0047AB" HorizontalOptions="CenterAndExpand" />
+                    <!--Surname input-->
+                    <Entry x:Name="surname_Entry" Placeholder="Enter your surname" Keyboard="Default"
+                           TextColor="Black" PlaceholderColor="#0047AB" HorizontalOptions="CenterAndExpand" />
+                    <!--License Number input-->
+                    <Entry x:Name="licenseNumber_Entry" Placeholder="Enter your license number" Keyboard="Default"
                            TextColor="Black" PlaceholderColor="#0047AB" HorizontalOptions="CenterAndExpand" />
                     <!--Password input-->
                     <Entry x:Name="password_Entry" Placeholder="Create a password" IsPassword="True" Keyboard="Default"
